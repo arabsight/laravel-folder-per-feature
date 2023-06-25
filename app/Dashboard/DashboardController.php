@@ -3,11 +3,13 @@
 namespace App\Dashboard;
 
 use App\Core\Http\Controllers\Controller;
+use App\Users\User;
 
 class DashboardController extends Controller
 {
     public function __invoke()
     {
-        return 'Hello World!';
+        $users = User::all();
+        return $users;
     }
 }

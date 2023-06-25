@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Users\Roles;
+use App\Users\UserRoles;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         \App\Users\User::factory()->create([
             'name' => 'Rabah Ghodbane',
             'email' => 'arabsight@gmail.com',
-            'role' => Roles::SUPERADMIN,
+            'role' => UserRoles::SUPERADMIN->value,
         ]);
     }
 }
